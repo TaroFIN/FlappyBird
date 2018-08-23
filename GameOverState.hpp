@@ -9,7 +9,7 @@ namespace TaroFIN
 	class GameOverState : public State
 	{
 	public:
-		GameOverState(GameDataRef data);
+		GameOverState(GameDataRef data,int score);
 
 		void Init();
 
@@ -21,5 +21,17 @@ namespace TaroFIN
 		GameDataRef _data;
 
 		sf::Sprite _background;
+
+		sf::Sprite _gameOverTitle;
+		sf::Sprite _gameOverContainer;
+		sf::Sprite _retryButton;
+		sf::Sprite _medal;
+
+		sf::Text _scoreText;
+		sf::Text _highScoreText;
+
+		int _score;
+		int _highScore;
+		
 	};
 }

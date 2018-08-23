@@ -15,6 +15,12 @@ namespace TaroFIN {
 
 		void Animate(float dt);
 
+		void Update(float dt);
+
+		void Tap();
+
+		const sf::Sprite &GetSprite() const;
+
 	private:
 		GameDataRef _data;
 
@@ -24,6 +30,12 @@ namespace TaroFIN {
 		unsigned int _animationIterator;
 
 		sf::Clock _clock;
+
+		sf::Clock _movementClock;
+
+		int _birdState;
+
+		float _rotation;
 
 	};
 }
